@@ -1,4 +1,4 @@
-import time
+import time, random
 
 def talk(statement):
   time.sleep(1)
@@ -8,6 +8,8 @@ def talk(statement):
 def listen():
   print()
   return input(">>> ")
+
+greetings = ["Hello", "Hi", "Good day", "What's up"]
 
 # program intro
 print("This program says hello to the person of your choice")
@@ -22,10 +24,10 @@ while again:
   if times.isdigit():
     times = int(times)
     for i in range(times):
-      talk(f"Hello {name}!")
+      talk(f"{random.choice(greetings)}, {name}!")
   else:
     talk("You didn't enter a number so I'll say hello once")
-    talk(f"Hello {name}!")
+    talk(f"{random.choice(greetings)}, {name}!")
   print()
   talk("Say hello to someone else? (y/n) ")
   choice = listen()
