@@ -1,7 +1,12 @@
+import time
+
 def talk(statement):
+  time.sleep(1)
+  print()
   print("< ~ " + statement)
 
 def listen():
+  print()
   return input(">>> ")
 
 # program intro
